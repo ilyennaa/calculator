@@ -3,8 +3,8 @@
 }
 
 .calc-container {
-    height: 550px;
-    width: 500px;
+    height: 600px;
+    width: 550px;
     background-color: dimgray;
     display: flex;
     flex-direction: column;
@@ -13,15 +13,15 @@
 }
 
 .button-container {
-    height: 400px;
-    width: 450px;
+    height: 450px;
+    width: 500px;
     background-color: aqua;
     margin-bottom: 25px;
 }
 
 .number-display {
     height: 50px;
-    width: 443px;
+    width: 493px;
     margin-bottom: 15px;
     font-size: 40px;
     text-align: right;
