@@ -1,5 +1,6 @@
 const button = document.querySelectorAll('.button');
-
+const button7 = document.getElementById('7');
+console.log(button7.textContent);
 
 
 
