@@ -1,5 +1,23 @@
-const button = document.querySelectorAll('.button');
-const button7 = document.getElementById('7');
+const button1 = document.getElementById('1');
+const button2 = document.getElementById('2');
+const button3 = document.getElementById('3');
+const buttonMinus = document.getElementById('minus');
+
+const button4 = document.getElementById('4');
+const button5 = document.getElementById('5');
+const button6 = document.getElementById('6');
+const buttonMultiply = document.getElementById('multiply');
+
+const button7 = document.getElementById('1');
+const button8 = document.getElementById('2');
+const button9 = document.getElementById('3');
+const buttonDivide = document.getElementById('divide');
+
+const buttonNegative = document.getElementById('1');
+const button0 = document.getElementById('2');
+const buttonDecimal = document.getElementById('3');
+const buttonPlus = document.getElementById('plus');
+
 console.log(button7.textContent);
 
 
