@@ -40,7 +40,7 @@ buttonsSelector.forEach((element) => {
 });
 
 // general 'operate' function
-function operate(operator, num1, num2) {
+const operate = (operator, num1, num2) => {
     switch (operator) {
         case '+':
             return add(num1, num2);
@@ -54,18 +54,7 @@ function operate(operator, num1, num2) {
 }
 
 // basic arithmetic functions
-function add(num1, num2) {
-    return num1 + num2;
-}
-
-function subtract(num1, num2) {
-    return num1 - num2;
-}
-
-function multiply(num1, num2) {
-    return num1 * num2;
-}
-
-function divide(num1, num2) {
-    return num1 / num2;
-}
+const add = (num1, num2) => num1 + num2;
+const subtract = (num1, num2) => num1 - num2;
+const multiply = (num1, num2) => num1 * num2;
+const divide = (num1, num2) => num1 / num2;
