@@ -39,7 +39,8 @@
     width: 100%;
 }
 
-.button {
+.button,
+.operator {
     width: 105px;
     height: 90px;
     margin-bottom: 10px;
