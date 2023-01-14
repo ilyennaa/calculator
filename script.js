@@ -3,7 +3,21 @@ const numberDisplay = document.querySelector('.number-display');
 
 buttonsSelector.forEach((element) => {
     element.addEventListener("click", () => {
-        numberDisplay.value += `${element.getAttribute('id')}`;
+        idSelector = element.getAttribute('id');
+
+        switch (idSelector) {
+            case 'negative':
+                break;
+            case 'decimal':
+                numberDisplay.value += '.';
+                break;
+            case '0':
+                if (numberDisplay.value == '') {
+                    break;
+                }
+            default:
+                numberDisplay.value += `${idSelector}`;
+        } 
     });
 });
 
