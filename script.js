@@ -19,6 +19,39 @@ const buttonDecimal = document.getElementById('3');
 const buttonPlus = document.getElementById('plus');
 
 
+const numberDisplay = document.querySelector('.number-display');
+
+
+button1.addEventListener("click", ()=> {
+    numberDisplay.value += "1";
+});
+button2.addEventListener("click", ()=> {
+    numberDisplay.value += "2";
+});
+button3.addEventListener("click", ()=> {
+    numberDisplay.value += "3";
+});
+
+button4.addEventListener("click", ()=> {
+    numberDisplay.value += "4";
+});
+button5.addEventListener("click", ()=> {
+    numberDisplay.value += "5";
+});
+button6.addEventListener("click", ()=> {
+    numberDisplay.value += "6";
+});
+
+button7.addEventListener("click", ()=> {
+    numberDisplay.value += "7";
+});
+button8.addEventListener("click", ()=> {
+    numberDisplay.value += "8";
+});
+button9.addEventListener("click", ()=> {
+    numberDisplay.value += "9";
+});
+
 function operate(operator, num1, num2) {
     switch (operator) {
         case '+':
