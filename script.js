@@ -1,5 +1,11 @@
 const buttonsSelector = document.querySelectorAll('.button');
 const numberDisplay = document.querySelector('.number-display');
+const equalsButton = document.querySelector('#equals');
+const clearButton = document.querySelector('#clear');
+
+clearButton.addEventListener("click", () => {
+    clearDisplay();
+});
 
 // place an event listener onto each button
 // that has class '.button'
@@ -38,6 +44,12 @@ buttonsSelector.forEach((element) => {
         } 
     });
 });
+
+
+// clears the number display
+const clearDisplay = () => {
+    numberDisplay.value = '';
+}
 
 // general 'operate' function
 const operate = (operator, num1, num2) => {
