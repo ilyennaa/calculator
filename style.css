@@ -56,6 +56,13 @@
     background-color: rgb(255, 146, 44);
 }
 
+.operator:hover {
+    background-color: rgb(187, 107, 32);
+}
+.button:hover {
+    background-color: #bbb;
+}
+
 body {
     background: black;
     display: flex;
