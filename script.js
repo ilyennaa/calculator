@@ -1,4 +1,5 @@
 const buttonsSelector = document.querySelectorAll('.button');
+const operatorSelector = document.querySelectorAll('.operator');
 const numberDisplay = document.querySelector('.number-display');
 const equalsButton = document.querySelector('#equals');
 const clearButton = document.querySelector('#clear');
@@ -42,6 +43,18 @@ buttonsSelector.forEach((element) => {
             default:
                 numberDisplay.value += `${idSelector}`;
         } 
+    });
+});
+
+operatorSelector.forEach((element) => {
+    element.addEventListener("click", () => {
+        // create variable to store operator symbol
+        const operatorSymbol = element.innerHTML;
+        
+        //
+
+        // operate(firstNumber, secondNumber, operatorSymbol);
+
     });
 });
 
