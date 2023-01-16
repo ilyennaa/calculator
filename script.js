@@ -4,6 +4,8 @@ const numberDisplay = document.querySelector('.number-display');
 const equalsButton = document.querySelector('#equals');
 const clearButton = document.querySelector('#clear');
 
+let total = 0;
+
 clearButton.addEventListener("click", () => {
     clearDisplay();
 });
@@ -48,12 +50,19 @@ buttonsSelector.forEach((element) => {
 
 operatorSelector.forEach((element) => {
     element.addEventListener("click", () => {
-        // create variable to store operator symbol
+        let numberInDisplay = Number(numberDisplay.value);
+
+        // store the first number in a variable
+        let firstNumber = numberInDisplay;
+
+        // store the operator symbol in a variable
         const operatorSymbol = element.innerHTML;
         
-        //
-
-        // operate(firstNumber, secondNumber, operatorSymbol);
+        // store the second number in a variable
+        
+        // call the operate function
+        // display the total to the numberDisplay
+        
 
     });
 });
@@ -62,6 +71,7 @@ operatorSelector.forEach((element) => {
 // clears the number display
 const clearDisplay = () => {
     numberDisplay.value = '';
+    total = 0;
 }
 
 // general 'operate' function
