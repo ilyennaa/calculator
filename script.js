@@ -19,8 +19,8 @@ buttonsSelector.forEach((element) => {
                 // convert numberDisplay value to a number
                 let numberInDisplay = Number(numberDisplay.value);
 
-                // if it's greater than zero, convert it to negative
-                // else convert it to positive
+                // if numberInDisplay is greater than zero, convert it to
+                // negative, else convert it to positive
                 if (numberInDisplay > 0) {
                     numberInDisplay = -Math.abs(numberInDisplay);
                 } else {
