@@ -1,19 +1,39 @@
-
-
+let firstNumber = 0;
+let operator = '';
+let secondNumber = 0;
+let secondaryDisplayFull = false;
 
 const numberButtons = document.querySelectorAll('.number');
 const operatorButtons = document.querySelectorAll('.operator');
 const equalsButton = document.querySelector('.equals');
 const decimalButton = document.querySelector('.decimal');
+const mainDisplay = document.getElementById('main-number-display');
+const secondaryDisplay = document.getElementById('secondary-number-display');
 
-console.log(numberButtons);
-console.log(operatorButtons);
-console.log(equalsButton);
-console.log(decimalButton);
+const displayNumber = (element) => {
+    mainDisplay.textContent += element.target.textContent;
+}
 
+const setOperator = (element) => {
+    firstNumber = mainDisplay.textContent;
+    operator = element.target.textContent;
+    secondaryDisplay.textContent = `${firstNumber} ${operator}`;
+    mainDisplay.textContent = '';
+}
 
+const evaluate = () => {
+    
+}
 
-const operate = (firstNumber, operator, secondNumber) => {
+numberButtons.forEach((element) => 
+    element.addEventListener("click", displayNumber)
+);
+
+operatorButtons.forEach((element) => {
+    element.addEventListener("click", setOperator)
+});
+
+const operate = (firstNumber, secondNumber, operator) => {
     switch(operator) {
         case '+':
             return add(firstNumber, secondNumber);
