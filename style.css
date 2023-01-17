@@ -1,5 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
 * {
     margin: 0;
+}
+
+:root {
+    --calculator-case: rgb(54, 54, 54);
+    --calculator: rgb(87, 87, 87);
+}
+
+.calculator-case {
+    width: 450px;
+    height: 500px;
+    background-color: var(--calculator-case);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 400px;
+    height: 450px;
+    background-color: var(--calculator);
+    display: flex;
+    flex-direction: column;
+}
+
+.number-display {
+    background-color: red;
+    width: 80%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
+
+#main-number-display,
+#secondary-number-display {
+    background-color: #fff;
+}
+
+#main-number-display {
+    height: 65px;
+}
+
+#secondary-number-display {
+    height: 35px;
+}
+
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: #eee;
+  }
+
+.buttons-display {
+    width: 100%;
+    height: 350px;
+    margin-top: 10px;
+}
+
+.button-row {
+    height: 87.5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    height: 77.5px;
+    width: 90px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
 }
 
 
