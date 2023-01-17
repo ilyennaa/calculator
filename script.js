@@ -2,7 +2,6 @@ let firstNumber = 0;
 let operator = '';
 let secondNumber = 0;
 let total = 0;
-let secondaryDisplayFull = false;
 
 const numberButtons = document.querySelectorAll('.number');
 const operatorButtons = document.querySelectorAll('.operator');
@@ -20,14 +19,19 @@ const setOperator = (element) => {
     operator = element.target.textContent;
     secondaryDisplay.textContent = `${firstNumber} ${operator} `;
     mainDisplay.textContent = '';
-    secondaryDisplayFull = true;
 }
 
 const evaluate = () => {
     secondNumber = mainDisplay.textContent;
     secondaryDisplay.textContent += secondNumber;
     total = operate(Number(firstNumber), Number(secondNumber), operator);
+    secondaryDisplay.textContent += ' = ';
     mainDisplay.textContent = total;
+}
+
+const clearScreens = () => {
+    mainDisplay.textContent = '';
+    secondaryDisplay.textContent = '';
 }
 
 numberButtons.forEach((element) => 
@@ -39,6 +43,8 @@ operatorButtons.forEach((element) => {
 });
 
 equalsButton.addEventListener("click", evaluate);
+
+
 
 const operate = (firstNumber, secondNumber, operator) => {
     switch(operator) {
