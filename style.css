@@ -6,7 +6,6 @@
 
 :root {
     --calculator-case: rgb(54, 54, 54);
-    --calculator: rgb(87, 87, 87);
 }
 
 .calculator-case {
@@ -21,7 +20,6 @@
 .calculator {
     width: 400px;
     height: 450px;
-    background-color: var(--calculator);
     display: flex;
     flex-direction: column;
 }
@@ -39,23 +37,20 @@
 #main-number-display,
 #secondary-number-display {
     background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 #main-number-display {
     height: 65px;
+    font-size: 30px;
 }
 
 #secondary-number-display {
     height: 35px;
 }
-
-input {
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom-style: groove;
-    background-color: #eee;
-  }
 
 .buttons-display {
     width: 100%;
@@ -79,6 +74,10 @@ input {
     align-items: center;
     font-size: 60px;
     font-family: 'Roboto', sans-serif;
+}
+
+.button:hover {
+    background-color: rgb(125, 177, 194);
 }
 
 
