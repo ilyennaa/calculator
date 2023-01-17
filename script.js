@@ -5,6 +5,7 @@ const equalsButton = document.querySelector('#equals');
 const clearButton = document.querySelector('#clear');
 
 let total = 0;
+let solutionArray = [];
 
 clearButton.addEventListener("click", () => {
     clearDisplay();
@@ -14,7 +15,9 @@ clearButton.addEventListener("click", () => {
 // that has class '.button'
 buttonsSelector.forEach((element) => {
     element.addEventListener("click", () => {
-        idSelector = element.getAttribute('id');
+        idSelector = element.innerHTML;
+        solutionArray.push(idSelector);
+
 
         switch (idSelector) {
             case 'negative':
@@ -48,25 +51,6 @@ buttonsSelector.forEach((element) => {
     });
 });
 
-operatorSelector.forEach((element) => {
-    element.addEventListener("click", () => {
-        let numberInDisplay = Number(numberDisplay.value);
-
-        // store the first number in a variable
-        let firstNumber = numberInDisplay;
-
-        // store the operator symbol in a variable
-        const operatorSymbol = element.innerHTML;
-        
-        // store the second number in a variable
-        
-        // call the operate function
-        // display the total to the numberDisplay
-        
-
-    });
-});
-
 
 // clears the number display
 const clearDisplay = () => {
@@ -75,7 +59,7 @@ const clearDisplay = () => {
 }
 
 // general 'operate' function
-const operate = (operator, num1, num2) => {
+const operate = (num1, num2, operator) => {
     switch (operator) {
         case '+':
             return add(num1, num2);
