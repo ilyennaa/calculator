@@ -7,6 +7,7 @@ const numberButtons = document.querySelectorAll('.number');
 const operatorButtons = document.querySelectorAll('.operator');
 const equalsButton = document.querySelector('.equals');
 const decimalButton = document.querySelector('.decimal');
+const clearButton = document.querySelector('.clear-button');
 const mainDisplay = document.getElementById('main-number-display');
 const secondaryDisplay = document.getElementById('secondary-number-display');
 
@@ -43,7 +44,7 @@ operatorButtons.forEach((element) => {
 });
 
 equalsButton.addEventListener("click", evaluate);
-
+clearButton.addEventListener("click", clearScreens);
 
 
 const operate = (firstNumber, secondNumber, operator) => {
