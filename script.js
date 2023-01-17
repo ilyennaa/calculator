@@ -2,6 +2,7 @@ let firstNumber = 0;
 let operator = '';
 let secondNumber = 0;
 let total = 0;
+let isSeconDaryDisplayFull = false;
 
 const numberButtons = document.querySelectorAll('.number');
 const operatorButtons = document.querySelectorAll('.operator');
@@ -20,9 +21,12 @@ const setOperator = (element) => {
     operator = element.target.textContent;
     secondaryDisplay.textContent = `${firstNumber} ${operator} `;
     mainDisplay.textContent = '';
+    isSeconDaryDisplayFull = true;
 }
 
 const evaluate = () => {
+    if (isSeconDaryDisplayFull === false) return;
+    if (operator === '/' && mainDisplay.textContent === '0') divideByZero();
     secondNumber = mainDisplay.textContent;
     secondaryDisplay.textContent += secondNumber;
     total = operate(Number(firstNumber), Number(secondNumber), operator);
@@ -31,8 +35,23 @@ const evaluate = () => {
 }
 
 const clearScreens = () => {
+    isSeconDaryDisplayFull = false;
     mainDisplay.textContent = '';
     secondaryDisplay.textContent = '';
+    firstNumber = 0;
+    operator = '';
+    secondNumber = 0;
+    total = 0;
+}
+
+const addDecimal = () => {
+    if (mainDisplay.textContent === '') mainDisplay.textContent += "0";
+    mainDisplay.textContent += ".";
+}
+
+const divideByZero = () => {
+    alert("You can't divide by zero, idiot!");
+    clearScreens();
 }
 
 numberButtons.forEach((element) => 
@@ -45,6 +64,7 @@ operatorButtons.forEach((element) => {
 
 equalsButton.addEventListener("click", evaluate);
 clearButton.addEventListener("click", clearScreens);
+decimalButton.addEventListener("click", addDecimal);
 
 
 const operate = (firstNumber, secondNumber, operator) => {

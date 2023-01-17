@@ -77,6 +77,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.clear-button-row {
+    height: 87.5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .clear-button {
     background-color: lightblue;
     width: 45%;
